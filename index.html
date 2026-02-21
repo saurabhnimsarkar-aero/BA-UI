@@ -347,12 +347,12 @@ body{font-family:var(--font-sans);background:var(--bg);color:var(--text);height:
 </div>
 
 <script>
-// Multiple tile providers as fallback
 function makeTile(){
-  // Stadia Alidade Smooth Dark — free, no key, works everywhere
-  return L.tileLayer('https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',{
-    attribution:'© Stadia Maps © OpenMapTiles © OpenStreetMap',
-    maxZoom:20
+  // CartoDB Dark Matter via unpkg — no API key required
+  return L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_matter_nolabels/{z}/{x}/{y}{r}.png',{
+    attribution:'© OpenStreetMap © CARTO',
+    subdomains:'abcd',
+    maxZoom:19
   });
 }
 
